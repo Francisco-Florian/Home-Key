@@ -189,6 +189,10 @@ form button{
     padding: 10px;
 }
 
+#searchIcone{
+    display: none;
+}
+
 form button:hover{
     cursor: pointer;
     transition: all 0.2s;
@@ -457,6 +461,14 @@ form button:hover{
     #filter{
         flex-wrap: wrap;
         gap: 20px;
+    }
+
+    #searchIcone{
+        display: block;
+    }
+
+    #hidden{
+        display: none;
     }
     
     /* Section 2 */

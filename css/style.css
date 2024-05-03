@@ -426,11 +426,6 @@ form button:hover{
         flex-direction: column;
     }
 
-    .recommended::after{
-        top: 15px;
-        left: 40%;
-    }
-
     /* Section 3 */
 
     #activities{
@@ -502,10 +497,6 @@ form button:hover{
         height: 186px;
     }
 
-    .recommended::after{
-        top: 15px;
-        left: 40%;
-    }
 
     /* Section 3 */
 

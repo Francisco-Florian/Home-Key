@@ -16,16 +16,20 @@
     --open-sans: 'Open Sans', sans-serif;
 }
 
-body{
+
+p{
     font-family: var(--open-sans);
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 400;
 }
 
 a{
     text-decoration: none;
     color: var(--black);
     font-size: 16px;
-    font-weight: 400;
     transition: all 0.2s ease-in-out;
+    font-family: var(--open-sans);
 }
 
 a:hover{
@@ -38,25 +42,25 @@ ul{
     padding: 0;
 }
 
+.container_1440{
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 15px;
+}
+
 h1,
 h2{
+    font-family: var(--open-sans);
+    color: var(--black);
     font-weight: 700;
     font-size: 22px;
 }
 
 h3{
+    font-family: var(--open-sans);
+    color: var(--black);
+    font-weight: 700;
     font-size: 16px;
-}
-
-p{
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.container_1440{
-    max-width: 1440px;
-    margin: auto;
-    padding: 0 15px;
 }
 
 .greyBackground{
@@ -76,6 +80,8 @@ p{
 header{
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 100px;
     align-items: center;
 }
 
@@ -86,40 +92,30 @@ header img{
 
 header nav ul{
     display: flex;
+    justify-content: space-between;
     gap: 50px;
+}
+
+nav a{
     padding: 0 15px;
 }
 
-nav a:hover{
-    transition: all 0.4s ease-in-out;
+header nav ul li a:hover{
+    transition: all 0.4s;
     border-top: 2px solid red;
     padding-top: 38px;
 }
 
-/* footer */
+/* Footer */
 
 footer{
-    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
 }
 
-footer > div{
-    display: grid;
-    grid-template-columns: 30% 30% 40%;
-    background-color: var(--lightgrey);
-    border-radius: 20px 20px 0px 0px;
-    padding: 0 !important
-}
-
-footer > div > article{
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 50px;
-    gap: 20px;
-}
-
-footer > div > article > ul{
-    display: grid;
-    gap: 10px;
+footer h2{
+    font-size: 18px;
 }
 
 footer > p{
@@ -128,14 +124,47 @@ footer > p{
     margin: 20px;
 }
 
+footer div{
+    display: flex;
+    width: 100%;
+    background-color: var(--lightgrey);
+    border-radius: 20px 20px 0px 0px;
+    padding: 0 !important;
+}
+
+footer > div > article{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+    flex: 1;
+}
+
+footer div article ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /* Section 1 */
 
 #section1{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
 }
 
 #section1 > p{
     margin-bottom: 40px;
+}
+
+#section1 h1{
+    font-style: 22px;
+    padding-top: 40px;
+}
+
+#icone{
+    color: var(--white);
 }
 
 form{
@@ -150,7 +179,6 @@ form input{
 
 form i{
     display: flex !important;
-    color: var(--white);
     align-items: center;
     justify-content: center;
     width: 30px;
@@ -167,13 +195,13 @@ form button{
     padding: 10px;
 }
 
+#searchIcone{
+    display: none;
+}
+
 form button:hover{
     cursor: pointer;
     transition: all 0.2s;
-}
-
-#searchIcone{
-    display: none;
 }
 
 #filter{
@@ -181,6 +209,10 @@ form button:hover{
     gap: 24px;
     align-items: center;
     padding-bottom: 40px;
+}
+
+#filter h2{
+    font-size: 18px;
 }
 
 .tagBorder{
@@ -196,58 +228,55 @@ form button:hover{
 .tagBorder:hover{
     background-color: var(--red);
     color: var(--white);
+    transition: all 0.2s;
+}
+
+.tagBorder:hover p{
+    color: var(--white);
+    transition: all 0.2s;
 }
 
 #infoIcone{
     color: var(--red);
 }
 
-/* Section 2 */
+/* section 2 */
 
 #section2{
-    display: grid;
-    grid-template-columns: 67% 30%;
+    display: flex;
     gap: 40px;
 }
 
 .section2Div{
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
     border-radius: 12px;
-    gap: 20px;
+    padding: 40px;
+}
+
+.section2Div > h2{
+    padding-bottom: 40px;
 }
 
 .section2Div > a{
-    font-weight: 700;
     font-size: 18px;
-}
-
-.accomodation1Flex{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.accomodation1{
-    background-color: var(--white);
-    border-radius: 12px;
-    padding: 5px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    position: relative;
+    font-weight: 700;
+    padding-top: 20px;
 }
 
 .accomodation1 img{
     width: 100%;
     height: 160px;
     object-fit: cover;
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
 }
 
-.accomodation1:hover img{
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.02);
-    filter: grayscale(60%);
+.accomodation1{
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
 }
 
 .accomodation1 h3,
@@ -269,32 +298,64 @@ form button:hover{
     font-size: 13px;
 }
 
-.accomodation1Flex2{
-    display: grid;
-    gap: 20px;
+.accomodation1:hover img{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.02);
+    filter: grayscale(60%);
 }
 
-.accomodation1Flex2 img{
+.accomodation1 > p{
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+.accomodation1Flex{
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    max-width: 880px;
+    justify-content: space-between;
+}
+
+.accomodation1Flex > a{
+    flex: 1 0 30%;
+}
+
+.accomodation2 img{
+    width: 40%;
     height: 160px;
-    width: 100%;
     object-fit: cover;
-    border-radius: 12px 0px 0px 12px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 .accomodation2{
-    display: grid;
-    grid-template-columns: 40% 60%;
     background-color: var(--white);
+    border-radius: 20px;
     padding: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 12px;
+    display: flex;
     gap: 20px;
     position: relative;
 }
 
 .accomodation2 > div{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 45px;
+}
+
+.accomodation2:hover img{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.02);
+    filter: grayscale(60%);
+}
+
+.accomodation1Flex2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
 }
 
 .accomodation2::after{
@@ -307,34 +368,18 @@ form button:hover{
     padding: 5px;
     border-radius: 4px;
     font-size: 13px;
-}
+}   
 
-/* Section 3 */
+
+/* section 3 */
 
 #section3 h2{
     padding: 50px 0;
 }
 
 #activities{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.activities{
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 10px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    text-align: center;
-}
-
-#activities a:hover{
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.02);
-    filter: grayscale(60%);
-}
-
-.activities > h3{
-    padding: 10px;
+    display: flex;
+    gap: 40px;
 }
 
 #activities img{
@@ -344,28 +389,58 @@ form button:hover{
     border-radius: 20px 20px 0 0;
 }
 
-/* Responsive tablette */
+#activities a{
+    flex: 1 0 20%;
+}
+
+#activities a:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.02);
+    filter: grayscale(60%);
+}
+
+.activities{
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 10px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    text-align: center;
+}
+
+.activities > h3{
+    padding: 10px;
+}
+
+/* ajustement responsive */
+
+@media screen and (max-width: 1128px){
+    .accomodation2 img{
+        height: 170px;
+    }
+}
+
+/* responsive tablette */
 
 @media screen and (max-width: 1024px){
 
     /* Section 2 */
 
     #section2{
-        grid-template-columns: 1fr;
-    }
-
-    .item1{
-        order: 2;
-    }
-
-    .item2{
-        order: 1;
+        flex-direction: column;
     }
 
     /* Section 3 */
 
     #activities{
-        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #activities a{
+        flex: 1 0 45%;
+    }
+    
+    /* footer */
+
+    footer div{
+        padding: 0px !important;
     }
 }
 
@@ -387,13 +462,13 @@ form button:hover{
     header nav ul{
         gap: 0px;
     }
-
+    
     nav a{
         padding: 0 15px;
         border-bottom: 1px solid var(--lightgrey);
         padding: 20px;
     }
-
+    
     header nav ul li a:hover{
         transition: all 0.2s;
         border-bottom: 2px solid red;
@@ -403,11 +478,16 @@ form button:hover{
 
     /* footer */
 
-    footer > div{
-        grid-template-columns: 1fr;
+    footer div{
+        flex-direction: column;
     }
 
     /* Section 1 */
+
+    #filter{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
     #searchIcone{
         display: block;
@@ -416,29 +496,34 @@ form button:hover{
     #hidden{
         display: none;
     }
+    
+    /* Section 2 */
 
-    #filter{
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-     /* Section 2 */
-
-    .accomodation1Flex{
-        grid-template-columns: 1fr;
-    }
-
-    .accomodation2 img{
-        height: 186px;
+    #section2{
+        flex-direction: column-reverse;
     }
 
     .accomodation2{
         gap: 5px;
     }
 
+    .accomodation1Flex > a{
+        flex: 100%;
+    }
+
+    .accomodation2 img{
+        height: 186px;
+    }
+
+
     /* Section 3 */
 
     #activities{
-        grid-template-columns: 1fr;
+        justify-content: inherit;
+    }
+    #activities a{
+        flex: 1 0 100%;
     }
 }
+
+

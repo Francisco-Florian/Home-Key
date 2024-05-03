@@ -121,6 +121,7 @@ footer h2{
 footer > p{
     text-align: center;
     padding-top: 10px;
+    margin: 20px;
 }
 
 footer div{
@@ -456,6 +457,23 @@ form button:hover{
 
     nav{
         padding-bottom: 50px;
+    }
+
+    header nav ul{
+        gap: 0px;
+    }
+    
+    nav a{
+        padding: 0 15px;
+        border-bottom: 1px solid var(--lightgrey);
+        padding: 20px;
+    }
+    
+    header nav ul li a:hover{
+        transition: all 0.2s;
+        border-bottom: 2px solid red;
+        border-top: none;
+        padding-bottom: 20px;
     }
 
     /* footer */
